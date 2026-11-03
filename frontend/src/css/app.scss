@@ -1,0 +1,19 @@
+// CSS global da aplicação
+
+body {
+  background: #f5f7fa;
+}
+
+// faixa de título usada no topo de cada página
+.header-section {
+  background-color: $primary;
+  min-height: 80px;
+  box-shadow:
+    0 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0 4px 5px 0 rgba(0, 0, 0, 0.14);
+}
+
+// campos que o NuExtract3 não conseguiu preencher
+.campo-destaque .q-field__control {
+  background: #fff7ec;
+}
