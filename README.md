@@ -56,6 +56,10 @@ sistema/
    cd frontend
    npm install
    ```
+5. **Link público (opcional)**: para acessar o sistema de outros dispositivos, como o celular, instale o cloudflared:
+   ```
+   winget install Cloudflare.cloudflared
+   ```
 
 ## Executando
 
@@ -65,7 +69,9 @@ Forma mais simples (de qualquer pasta, no terminal ou com duplo clique):
 C:\Users\Bruno\Desktop\TCC\sistema\iniciar.bat
 ```
 
-Abre o Ollama (se necessário), a API e o frontend em janelas próprias e carrega o navegador.
+Abre o Ollama (se necessário), a API, o frontend e o link público (se o cloudflared estiver instalado) em janelas
+próprias e carrega o navegador. Nesse modo, a página não recarrega sozinha ao editar o código; para desenvolver,
+use `npm run dev` na pasta `frontend`.
 
 Alternativa no VS Code (com a pasta `sistema` aberta): **Terminal → Run Task → "Rodar sistema (backend + frontend)"**
 (ou F5 com a configuração "Backend (FastAPI)" para depurar a API).
@@ -76,6 +82,30 @@ Alternativa no VS Code (com a pasta `sistema` aberta): **Terminal → Run Task �
 
 > O Ollama precisa estar aberto (ícone na bandeja) para a extração funcionar.
 > Se não estiver, a tela de comprovante avisa e permite preencher os dados manualmente.
+
+## Acesso pelo celular ou por outras pessoas (link público)
+
+Com o cloudflared instalado, o `iniciar.bat` também abre a janela **"Link publico"**, que cria um túnel gratuito do
+Cloudflare ([Quick Tunnels](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/do-more-with-tunnels/trycloudflare/))
+e mostra um endereço `https://<nome-aleatorio>.trycloudflare.com`. Qualquer navegador abre o sistema por esse endereço.
+Como o frontend repassa as chamadas `/api` para a API, só a porta 5173 é exposta. Para criar o túnel manualmente:
+
+```
+cloudflared tunnel --url http://localhost:5173
+```
+
+- O link continua o mesmo enquanto a janela "Link publico" estiver aberta, mesmo que a API ou o frontend sejam reiniciados.
+  Ele muda quando a janela é fechada ou o PC é reiniciado.
+- Só funciona com o PC ligado e o sistema rodando.
+- O serviço gratuito encerra requisições que passam de cerca de 100 segundos.
+- Qualquer pessoa com o link pode criar conta e enviar arquivos: compartilhe só em testes e demonstrações.
+
+Ajustes feitos no frontend para isso ([quasar.config.js](frontend/quasar.config.js)):
+
+- `allowedHosts: ['.trycloudflare.com']`: o Vite recusa endereços desconhecidos, e isso libera os do túnel.
+- `ws: false` quando `SEM_HMR=1` (o `iniciar.bat` define essa variável): desliga a atualização automática (HMR).
+  Pelo túnel, essa conexão cai (no celular, por exemplo, ao abrir a câmera) e o Vite recarrega a página,
+  o que cancelava a extração em andamento. Rodando `npm run dev` direto, o HMR continua ativo.
 
 ## Teste de ponta a ponta
 
