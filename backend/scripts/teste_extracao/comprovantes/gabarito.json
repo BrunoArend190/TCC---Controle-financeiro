@@ -1,0 +1,194 @@
+[
+ {
+  "arquivo": "c01_limpo.png",
+  "condicao": "limpo",
+  "valor": "92.23",
+  "data": "2026-11-03",
+  "estabelecimento": "SUPERMERCADO BOM PRECO LTDA",
+  "categoria": "Alimentação"
+ },
+ {
+  "arquivo": "c01_foto.png",
+  "condicao": "foto",
+  "valor": "92.23",
+  "data": "2026-11-03",
+  "estabelecimento": "SUPERMERCADO BOM PRECO LTDA",
+  "categoria": "Alimentação"
+ },
+ {
+  "arquivo": "c01_baixa_resolucao.png",
+  "condicao": "baixa_resolucao",
+  "valor": "92.23",
+  "data": "2026-11-03",
+  "estabelecimento": "SUPERMERCADO BOM PRECO LTDA",
+  "categoria": "Alimentação"
+ },
+ {
+  "arquivo": "c02_limpo.png",
+  "condicao": "limpo",
+  "valor": "83.39",
+  "data": "2026-10-28",
+  "estabelecimento": "FARMACIA SAUDE TOTAL",
+  "categoria": "Saúde"
+ },
+ {
+  "arquivo": "c02_foto.png",
+  "condicao": "foto",
+  "valor": "83.39",
+  "data": "2026-10-28",
+  "estabelecimento": "FARMACIA SAUDE TOTAL",
+  "categoria": "Saúde"
+ },
+ {
+  "arquivo": "c02_baixa_resolucao.png",
+  "condicao": "baixa_resolucao",
+  "valor": "83.39",
+  "data": "2026-10-28",
+  "estabelecimento": "FARMACIA SAUDE TOTAL",
+  "categoria": "Saúde"
+ },
+ {
+  "arquivo": "c03_limpo.png",
+  "condicao": "limpo",
+  "valor": "202.22",
+  "data": "2026-11-05",
+  "estabelecimento": "AUTO POSTO RODOVIA BR-282",
+  "categoria": "Transporte"
+ },
+ {
+  "arquivo": "c03_foto.png",
+  "condicao": "foto",
+  "valor": "202.22",
+  "data": "2026-11-05",
+  "estabelecimento": "AUTO POSTO RODOVIA BR-282",
+  "categoria": "Transporte"
+ },
+ {
+  "arquivo": "c03_baixa_resolucao.png",
+  "condicao": "baixa_resolucao",
+  "valor": "202.22",
+  "data": "2026-11-05",
+  "estabelecimento": "AUTO POSTO RODOVIA BR-282",
+  "categoria": "Transporte"
+ },
+ {
+  "arquivo": "c04_limpo.png",
+  "condicao": "limpo",
+  "valor": "58.28",
+  "data": "2026-11-10",
+  "estabelecimento": "RESTAURANTE SABOR CASEIRO ME",
+  "categoria": "Alimentação"
+ },
+ {
+  "arquivo": "c04_foto.png",
+  "condicao": "foto",
+  "valor": "58.28",
+  "data": "2026-11-10",
+  "estabelecimento": "RESTAURANTE SABOR CASEIRO ME",
+  "categoria": "Alimentação"
+ },
+ {
+  "arquivo": "c04_baixa_resolucao.png",
+  "condicao": "baixa_resolucao",
+  "valor": "58.28",
+  "data": "2026-11-10",
+  "estabelecimento": "RESTAURANTE SABOR CASEIRO ME",
+  "categoria": "Alimentação"
+ },
+ {
+  "arquivo": "c05_limpo.png",
+  "condicao": "limpo",
+  "valor": "44.82",
+  "data": "2026-11-08",
+  "estabelecimento": "PADARIA PAO DOURADO",
+  "categoria": "Alimentação"
+ },
+ {
+  "arquivo": "c05_foto.png",
+  "condicao": "foto",
+  "valor": "44.82",
+  "data": "2026-11-08",
+  "estabelecimento": "PADARIA PAO DOURADO",
+  "categoria": "Alimentação"
+ },
+ {
+  "arquivo": "c05_baixa_resolucao.png",
+  "condicao": "baixa_resolucao",
+  "valor": "44.82",
+  "data": "2026-11-08",
+  "estabelecimento": "PADARIA PAO DOURADO",
+  "categoria": "Alimentação"
+ },
+ {
+  "arquivo": "c06_limpo.png",
+  "condicao": "limpo",
+  "valor": "86.90",
+  "data": "2026-11-01",
+  "estabelecimento": "CINE ARTE SHOPPING",
+  "categoria": "Lazer"
+ },
+ {
+  "arquivo": "c06_foto.png",
+  "condicao": "foto",
+  "valor": "86.90",
+  "data": "2026-11-01",
+  "estabelecimento": "CINE ARTE SHOPPING",
+  "categoria": "Lazer"
+ },
+ {
+  "arquivo": "c06_baixa_resolucao.png",
+  "condicao": "baixa_resolucao",
+  "valor": "86.90",
+  "data": "2026-11-01",
+  "estabelecimento": "CINE ARTE SHOPPING",
+  "categoria": "Lazer"
+ },
+ {
+  "arquivo": "c07_limpo.png",
+  "condicao": "limpo",
+  "valor": "182.63",
+  "data": "2026-10-20",
+  "estabelecimento": "CELESC DISTRIBUICAO S.A.",
+  "categoria": "Moradia"
+ },
+ {
+  "arquivo": "c07_foto.png",
+  "condicao": "foto",
+  "valor": "182.63",
+  "data": "2026-10-20",
+  "estabelecimento": "CELESC DISTRIBUICAO S.A.",
+  "categoria": "Moradia"
+ },
+ {
+  "arquivo": "c07_baixa_resolucao.png",
+  "condicao": "baixa_resolucao",
+  "valor": "182.63",
+  "data": "2026-10-20",
+  "estabelecimento": "CELESC DISTRIBUICAO S.A.",
+  "categoria": "Moradia"
+ },
+ {
+  "arquivo": "c08_limpo.png",
+  "condicao": "limpo",
+  "valor": "330.00",
+  "data": "2026-11-12",
+  "estabelecimento": "CLINICA ODONTO SORRISO",
+  "categoria": "Saúde"
+ },
+ {
+  "arquivo": "c08_foto.png",
+  "condicao": "foto",
+  "valor": "330.00",
+  "data": "2026-11-12",
+  "estabelecimento": "CLINICA ODONTO SORRISO",
+  "categoria": "Saúde"
+ },
+ {
+  "arquivo": "c08_baixa_resolucao.png",
+  "condicao": "baixa_resolucao",
+  "valor": "330.00",
+  "data": "2026-11-12",
+  "estabelecimento": "CLINICA ODONTO SORRISO",
+  "categoria": "Saúde"
+ }
+]

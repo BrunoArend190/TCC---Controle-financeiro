@@ -118,6 +118,11 @@ Com a API rodando, execute na pasta `backend` (use qualquer imagem de cupom fisc
 O script cria um usuário descartável, exercita todas as rotas (cadastro, login, categorias, despesas,
 RN03/RN04, extração, confirmação, relatórios, trigger de integridade) e remove tudo ao final.
 
+## Teste de extração
+
+Em [`backend/scripts/teste_extracao/`](backend/scripts/teste_extracao/README.md) está o teste do Quadro 16 do relatório:
+24 comprovantes fictícios (limpo, foto simulada e baixa resolução), com gabarito, script de medição e resultados registrados.
+
 ## Funcionalidades de gestão
 
 - **Orçamentos:** limite mensal por categoria, com barra de progresso e alerta no Dashboard a partir de 80%.
