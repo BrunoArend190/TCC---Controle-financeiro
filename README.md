@@ -106,6 +106,8 @@ Ajustes feitos no frontend para isso ([quasar.config.js](frontend/quasar.config.
 - `ws: false` quando `SEM_HMR=1` (o `iniciar.bat` define essa variável): desliga a atualização automática (HMR).
   Pelo túnel, essa conexão cai (no celular, por exemplo, ao abrir a câmera) e o Vite recarrega a página,
   o que cancelava a extração em andamento. Rodando `npm run dev` direto, o HMR continua ativo.
+- Nesse modo, um pequeno plugin (`extendViteConf`) ignora conexões encerradas de forma abrupta: sem ele, um navegador
+  fechado no meio de uma requisição gerava um `ECONNRESET` sem tratamento que derrubava o frontend.
 
 ## Teste de ponta a ponta
 
@@ -141,6 +143,8 @@ Um banco criado antes dessas funcionalidades é atualizado, sem perder dados, co
 
 1. `POST /despesas/comprovante/extrair`: o arquivo é salvo temporariamente e enviado ao NuExtract3
    com um template JSON (`valor_total`, `data`, `estabelecimento`, `categoria` ∈ categorias do usuário).
+   Se o arquivo é PDF, a resposta traz também `previa`: a primeira página convertida em imagem, exibida ao lado
+   do formulário (o navegador não mostra PDF como imagem).
 2. O usuário confere/corrige os dados na tela.
 3. `POST /despesas/comprovante/confirmar`: grava `despesa`, `comprovante` e `extracao_ocr`.
    O `status_extracao` fica `concluida` se nada foi alterado, `corrigida_manualmente` se houve correção

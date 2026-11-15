@@ -123,8 +123,12 @@ async def extrair_comprovante(
         mensagem = "Não foi possível ler o comprovante. Preencha os dados manualmente."
     elif resultado.status == StatusOCR.falha_parcial:
         mensagem = "Alguns dados não foram encontrados. Confira e complete antes de salvar."
+    previa = None
+    if extensao == "pdf":
+        previa = "data:image/png;base64," + await run_in_threadpool(extracao.imagem_base64, caminho)
     return ResultadoExtracao(
-        id_upload=id_upload, status=resultado.status, confianca=resultado.confianca, dados=dados, mensagem=mensagem
+        id_upload=id_upload, status=resultado.status, confianca=resultado.confianca, dados=dados, mensagem=mensagem,
+        previa=previa,
     )
 
 

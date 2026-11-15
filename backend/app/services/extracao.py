@@ -47,7 +47,7 @@ def montar_template(nomes_categorias: list[str]) -> dict:
     }
 
 
-def _imagem_base64(caminho: Path) -> str:
+def imagem_base64(caminho: Path) -> str:
     """Converte o comprovante (imagem ou 1ª página do PDF) em PNG base64."""
     if caminho.suffix.lower() == ".pdf":
         import pypdfium2 as pdfium
@@ -103,7 +103,7 @@ def extrair(caminho: Path, nomes_categorias: list[str]) -> Extracao:
             "model": settings.nuextract_modelo,
             "messages": [
                 {"role": "template", "content": json.dumps(template, ensure_ascii=False)},
-                {"role": "user", "content": "", "images": [_imagem_base64(caminho)]},
+                {"role": "user", "content": "", "images": [imagem_base64(caminho)]},
             ],
             "stream": False,
             "options": {"temperature": 0},

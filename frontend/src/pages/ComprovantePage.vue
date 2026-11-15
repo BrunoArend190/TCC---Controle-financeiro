@@ -137,6 +137,7 @@ async function extrair() {
   processando.value = true
   try {
     resultado.value = await despesasStore.extrairComprovante(arquivo.value)
+    if (resultado.value.previa) previa.value = resultado.value.previa // PDF: 1ª página renderizada pela API
     const d = resultado.value.dados
     dados.value = {
       valor: d.valor ?? '',

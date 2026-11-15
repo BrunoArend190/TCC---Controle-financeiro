@@ -153,6 +153,7 @@ class ResultadoExtracao(BaseModel):
     confianca: Decimal
     dados: DadosExtraidos
     mensagem: str | None = None
+    previa: str | None = None  # PDF: imagem da 1ª página (data URL), já que o navegador não exibe o PDF como imagem
 
 
 # ------------------------------------------------------------- relatórios
