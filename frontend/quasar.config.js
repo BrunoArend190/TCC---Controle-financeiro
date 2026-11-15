@@ -28,6 +28,17 @@ export default defineConfig(() => {
           { server: false },
         ],
       ],
+      // Com o HMR desligado (SEM_HMR), uma conexão encerrada de forma abrupta (ex.: celular fecha a aba)
+      // gerava um ECONNRESET sem tratamento que derrubava o servidor; aqui esses erros de conexão são ignorados.
+      extendViteConf(viteConf) {
+        if (!process.env.SEM_HMR) return
+        viteConf.plugins.push({
+          name: 'ignorar-conexoes-encerradas',
+          configureServer(server) {
+            server.httpServer?.on('connection', (socket) => socket.on('error', () => {}))
+          },
+        })
+      },
     },
 
     devServer: {
